@@ -68,6 +68,25 @@ pinwatch --snapshot --once
 The default installation path is `/usr/local/bin/pinwatch`. `PREFIX` and
 `DESTDIR` follow their usual Make conventions.
 
+## Install a release
+
+Tagged releases provide Bookworm-compatible packages for both 64-bit `arm64`
+and 32-bit `armhf` Raspberry Pi OS installations.
+
+The Debian package installs the executable and pulls in `libgpiolib0`:
+
+```sh
+sudo apt install ./pinwatch_1.0.0_arm64.deb
+```
+
+Release archives are also available for manual installation. They contain the
+binary, installation notes, README, and license. Every release includes
+`SHA256SUMS`, and its assets carry GitHub build-provenance attestations.
+
+The release binaries are a convenience for end users. Projects that vendor
+`pinwatch` as a Git subtree can keep compiling from source so their build does
+not depend on downloading a release asset.
+
 ## Requirements
 
 The officially supported setup is:
