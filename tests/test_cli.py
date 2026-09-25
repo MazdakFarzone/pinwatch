@@ -37,7 +37,7 @@ class PinwatchCliTests(unittest.TestCase):
     def run_pinwatch(self, *arguments):
         return subprocess.run(
             [str(self.binary), *arguments],
-            stdin=subprocess.DEVNULL,
+            input="",
             capture_output=True,
             text=True,
             timeout=2,
