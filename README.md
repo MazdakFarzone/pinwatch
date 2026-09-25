@@ -183,4 +183,7 @@ Bug reports, board compatibility results, documentation fixes, and focused
 pull requests are all appreciated. If you test a new board, please include the
 Pi model, Raspberry Pi OS release, architecture, and the exact command used.
 
+Created and maintained by
+[Mazdak Farzone](https://github.com/MazdakFarzone) and contributors.
+
 `pinwatch` is licensed under the [MIT License](LICENSE).
