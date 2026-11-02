@@ -4,8 +4,8 @@
 
 `pinwatch` is a tiny, read-only GPIO sidekick for Raspberry Pi. It watches the
 logic levels on the 40-pin header and emits newline-delimited JSON when
-something changes — without claiming the lines, changing their configuration,
-or asking your application to step aside.
+something changes without claiming the lines, changing their configuration,
+or asking your application to step aside! Cool right?
 
 It is useful when the software says _nothing happened_, the button insists it
 was pressed, and you would like the pins to testify for themselves.
@@ -182,12 +182,12 @@ An event looks like this:
 {"version":1,"event":"pin_level_changed","timestamp":"2026-09-25T08:15:42.123Z","monotonic_ns":41728944312,"physical_pin":11,"gpio":17,"level":1,"direction":"input","pull":"pu","function":"ip","sample_us":2000}
 ```
 
-## Safety notes
+## Safety notes - this is kind of important to know
 
 The source intentionally never calls a `gpiolib` write API. It does not change
 a pin's function, direction, pull, or output level. That makes it suitable for
 observing pins beside a running application, but it cannot make electrically
-unsafe wiring safe. Raspberry Pi GPIO uses 3.3 V logic and is not 5 V tolerant.
+unsafe wiring safe.
 
 ## Development and contributions
 
@@ -202,7 +202,5 @@ Bug reports, board compatibility results, documentation fixes, and focused
 pull requests are all appreciated. If you test a new board, please include the
 Pi model, Raspberry Pi OS release, architecture, and the exact command used.
 
-Created and maintained by
-[Mazdak Farzone](https://github.com/MazdakFarzone) and contributors.
-
-`pinwatch` is licensed under the [MIT License](LICENSE).
+Created and maintained by moi
+[Mazdak Farzone](https://github.com/MazdakFarzone).
